@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" /> 
+    <link rel="shortcut icon" href="img/images-modified.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lulu Gods</title>
+    <style>
+      #home h1, #home p, #home span{
+        text-shadow: 0 0 10px #000;
+      }
+
+      html, body{
+        scroll-behavior: smooth;
+      }
+
+      .shadow-error, #services .card {
+        box-shadow: 0 0 3px red;
+      }
+
+      #home {
+        background-image: url('img/1.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+    
+      @media (min-width: 1024px) { /* Tailwind's lg breakpoint */
+        #home {
+          background-image: url('img/sdcscs.jpg'); /* Change to your large screen image */
+        }
+      }
+    
+    </style>
+</head>
+<body class="relative w-full h-screen">
+    <div class="navbar bg-base-100 fixed z-10 py-0">
+        <div class="navbar-start lg:flex-row">
+          <div class="dropdown lg:hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:flex lg:flex-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-error"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-40 p-2 shadow flex justify-center items-center font-semibold">
+              <li class="hover:text-error"><a href="#home">Homepage</a></li>
+              <li class="hover:text-error"><a href="#services">Services</a></li>
+              <li class="hover:text-error"><a href="#contact">Contact Us</a></li>
+              <li class="hover:text-error"><a href="#team">Our Team</a></li>
+            </ul>
+          </div>
+          
+          <div class="hidden lg:contents lg:w-full">
+            <ul
+            tabindex="0"
+            class="bg-base-100 z-[1] w-40 lg:w-full p-2 flex lg:flex-row lg:justify-start lg:items-start font-semibold lg:gap-6">
+            <li class="hover:text-error"><a href="#home">Homepage</a></li>
+            <li class="hover:text-error"><a href="#services">Services</a></li>
+            <li class="hover:text-error"><a href="#contact">Contact Us</a></li>
+            <li class="hover:text-error"><a href="#team">Our Team</a></li>
+          </ul>
+          </div>
+
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl font-semibold italic font-mono hover:text-error">Lulu Gods</a>
+        </div>
+        <div class="navbar-end">
+            <div class="avatar">
+                <div class="ring-error ring-offset-base-100 w-10 rounded-full ring ring-offset-2">
+                  <img src="img/5.jpg" title="Lulu" />
+                </div>
+              </div>
+        </div>
+      </div>
+
+    <section id="home" class="w-full h-full">
+        <div class="hero min-h-screen flex flex-col items-center justify-center">
+            <div class="hero-content text-center w-full flex flex-col items-center justify-center lg:w-full lg:flex lg:flex-col lg:items-center lg:justify-center">
+              <div class="max-w-md lg:max-w-full lg:items-center lg:justify-center">
+                <h1 class="text-5xl lg:text-9xl font-bold text-white">Hello there!</h1>
+                <p class="py-6 text-white font-semibold lg:text-2xl lg:italic">
+                  We are the <span class="text-error lg:font-bold">Lulu Gang</span>. <br> Where we provide <span class="text-error lg:font-bold">amazing solutions</span> and <span class="text-error lg:font-bold">results</span> to any projects you may need. With a team of <span class="text-error lg:font-bold">innovative</span>, <span class="text-error lg:font-bold">creative</span> and <span class="text-error lg:font-bold">dedicated</span> individuals, yes, we make it happen!
+                </p>
+                <button class="btn btn-error text-white" onclick="my_modal_2.showModal()">Get Started</button>
+                <dialog id="my_modal_2" class="modal">
+                  <div class="modal-box">
+                    <h3 class="text-lg font-bold">Hello!</h3>
+                    <p class="py-4">Press ESC key or click outside to close</p>
+                  </div>
+                  <form method="dialog" class="modal-backdrop">
+                    <button>close</button>
+                  </form>
+                </dialog>
+                <div class="flex flex-row justify-center items-center text-white mt-3 gap-3 drop-shadow">
+                  <a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current hover:text-error">
+                      <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current hover:text-error">
+                      <path
+                        d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current hover:text-error">
+                      <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </section>
+
+    <section id="services" class="w-full h-full bg-cover bg-center flex flex-col justify-center items-center lg:flex-row" style="background-image: url('img/d-modified.jpeg');">
+      
+      <div class="hidden lg:w-1/2 lg:h-full lg:flex lg:flex-col lg:justify-center lg:items-center">
+        <div class="lg:text-center lg:w-10/12 lg:flex lg:flex-col lg:justify-center lg:items-center">
+          <h1 class="lg:w-10/12 lg:text-white lg:font-semibold lg:text-2xl lg:italic">
+            "Welcome to our services page! Here, we offer a blend of humor and practicality to meet your tech and everyday needs. From ‘expert’ washing machine troubleshooting to reminding you to take a bath, we’ve got you covered. Our services are relatable, especially for students, because who doesn’t need assistance with both tech struggles and crafting the perfect meme for social media? Dive in and discover how we make life easier—and funnier!"</h1>
+
+            <div class="stats shadow mt-3">
+              <div class="stat px-2">
+                <!-- <div class="stat-figure text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    class="inline-block h-8 w-8 stroke-current">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </div> -->
+                <div class="stat-title">Total Likes</div>
+                <div class="stat-value text-primary">25.6K</div>
+                <div class="stat-desc">21% more than last month</div>
+              </div>
+            
+              <div class="stat px-2">
+                <!-- <div class="stat-figure text-secondary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    class="inline-block h-8 w-8 stroke-current">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div> -->
+                <div class="stat-title">Page Views</div>
+                <div class="stat-value text-secondary">2.6M</div>
+                <div class="stat-desc">21% more than last month</div>
+              </div>
+            
+              <div class="stat px-6">
+                <!-- <div class="stat-figure text-secondary">
+                  <div class="avatar online">
+                    <div class="w-16 rounded-full">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                  </div>
+                </div> -->
+                <div class="stat-value">86%</div>
+                <div class="stat-title">Tasks done</div>
+                <div class="stat-desc text-secondary">31 tasks remaining</div>
+              </div>
+            </div>
+        </div>
+
+        <div class="flex flex-row justify-center items-center text-white mt-4 gap-3 drop-shadow">
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current hover:text-error">
+              <path
+                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current hover:text-error">
+              <path
+                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+            </svg>
+          </a>
+          <a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current hover:text-error">
+              <path
+                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="flex flex-col justify-center items-center lg:w-1/2">
+        <button class="btn btn-error text-white m-2" onclick="my_modal_3.showModal()">Services We Offer</button>
+        <dialog id="my_modal_3" class="modal">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click outside to close</p>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
+
+        <div id="card1" class="card bg-base-100 w-72 lg:w-9/12 h-96 shadow-xl z-0">
+          <figure>
+            <img
+              class="lg:mt-28"
+              src="img/2clttv-modified.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body p-0 text-center flex justify-center items-center font-mono font-semibold italic">
+            <h2 class="card-title">Block Blast!</h2>
+            <p>We will make sure that you will have the highest score.</p>
+          </div>
+        </div>
+
+        <div id="card2" class="card bg-base-100 w-72 lg:w-9/12 h-96 shadow-xl z-0 hidden">
+          <figure>
+            <img
+              class="lg:mt-16"
+              src="img/we-modified.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body p-0 text-center flex justify-center items-center font-mono font-semibold italic">
+            <h2 class="card-title">Washing Machine Repair!</h2>
+            <p>Yes, do we repair washing machines?</p>
+          </div>
+        </div>
+
+        <div id="card3" class="card bg-base-100 w-72 lg:w-9/12 h-96 shadow-xl z-0 hidden">
+          <figure>
+            <img
+              src="img/x1080-modified (1).jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body p-0 text-center flex justify-center items-center font-mono font-semibold italic">
+            <h2 class="card-title">Snack Finder Pro!</h2>
+            <p>We always know who has snacks, we dont get hungry.</p>
+          </div>
+        </div>
+
+        <div id="card4" class="card bg-base-100 w-72 lg:w-9/12 h-96 shadow-xl z-0 hidden">
+          <figure>
+            <img
+              src="img/2222-modified.jpg"
+              alt="Shoes" />
+          </figure>
+          <div class="card-body p-0 text-center flex justify-center items-center font-mono font-semibold italic">
+            <h2 class="card-title">Ligo Reminder!</h2>
+            <p>We will remind you to take a bath</p>
+          </div>
+        </div>
+
+        <div class="join m-2">
+          <button class="join-item btn hover:btn-error" onclick="showCard(1)">1</button>
+          <button class="join-item btn btn-active hover:btn-error" onclick="showCard(2)">2</button>
+          <button class="join-item btn hover:btn-error" onclick="showCard(3)">3</button>
+          <button class="join-item btn btn-active hover:btn-error" onclick="showCard(4)">4</button>
+        </div>
+
+        <div class="hidden lg:hidden stats shadow mt-3 h-20 w-11/12 flex flex-row text-center">
+          <div class="stat px-2">
+            <!-- <div class="stat-figure text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-8 w-8 stroke-current">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div> -->
+            <div class="stat-title text-sm">Total Likes</div>
+            <div class="stat-value text-primary text-2xl">25.6K</div>
+          </div>
+        
+          <div class="stat px-2">
+            <!-- <div class="stat-figure text-secondary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block h-8 w-8 stroke-current">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div> -->
+            <div class="stat-title text-sm">Page Views</div>
+            <div class="stat-value text-secondary text-2xl">2.6M</div>
+          </div>
+
+          <div class="stat px-2">
+            <!-- <div class="stat-figure text-secondary">
+              <div class="avatar online">
+                <div class="w-16 rounded-full">
+                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </div>
+              </div>
+            </div> -->
+            <div class="stat-title text-sm">Tasks done</div>
+            <div class="stat-value text-2xl">86%</div>
+          </div>
+        </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="contact" class="w-full h-full bg-cover bg-center flex flex-col lg:flex-row justify-center items-center" style="background-image: url('img/pexels-photo-4394274-modified.jpeg');">
+      <div class="w-full flex flex-col justify-center lg:justify-start items-center lg:items-start lg:h-screen">
+        <div class="chat chat-start mt-10 lg:mt-36 lg:ml-20 lg:w-1/2">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS chat bubble component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <div class="chat-header text-white font-bold italic">John Rey Enciso <time datetime="">12:12</time></div>
+            <div>
+              <div class="chat-bubble hidden lg:block lg:mb-2">Hey bro..</div>
+              <div class="chat-bubble">How do I get in touch Lulu Gods?</div>
+            </div>
+          <div class="chat-footer text-white font-bold italic">Delivered</div>
+        </div>
+  
+        <div class="chat chat-end lg:ml-64 lg:w-1/2">
+          <div class="chat-image avatar">
+            <div class="w-10 rounded-full">
+              <img
+                alt="Tailwind CSS chat bubble component"
+                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            </div>
+          </div>
+          <div class="chat-header text-white font-bold italic">Jomari Clarete <time datetime="">1:10</time></div>
+            <div>
+              <div class="chat-bubble hidden lg:block lg:mb-2">Slr man, busy</div>
+              <div class="chat-bubble">Contact them with the form.</div>
+            </div>
+          <div class="chat-footer text-white font-bold italic">Delivered</div>
+        </div>
+
+        <div class="hidden lg:block lg:mt-10 lg:pl-32">
+          <h1 class="text-xl font-bold text-white mb-2">Special offer will expire soon.</h1>
+          <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+            <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:15;"></span>
+              </span>
+              days
+            </div>
+            <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:10;"></span>
+              </span>
+              hours
+            </div>
+            <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:24;"></span>
+              </span>
+              min
+            </div>
+            <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value:${counter};"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-control w-10/12 mt-2 lg:flex lg:flex-col">
+        <div class="flex flex-col lg:w-10/12">
+          <h1 class="text-white hidden lg:block text-3xl font-bold lg:text-error text-center mb-5">Send us a message for inquiries.</h1>
+          <h1 class="text-white hidden lg:block text-lg lg:text-2xl font-bold lg:text-error text-center mb-3">Get in touch with us.</h1>
+          <label for="" class="input input-bordered flex items-center gap-2 mb-5">Name
+            <input type="text" placeholder="John" class="grow">
+          </label>
+          <label for="" class="input input-bordered flex items-center gap-2 mb-5">Email
+            <input type="text" placeholder="johnenciso@aroro.com" class="grow">
+          </label>
+          <textarea name="" id="" class="textarea textarea-bordered mb-5" placeholder="Your message"></textarea>
+          <button class="btn btn-error text-white mb-5">Send</button>
+
+          <div class="hidden lg:flex flex-row justify-center items-center text-white lg:mt-4 gap-3 drop-shadow">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-error">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-error">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current hover:text-error">
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="w-full h-full bg-cover bg-center flex flex-col lg:flex-col" style="background-image: url('img/s4.jpg');">
+      <div class="flex-col flex justify-center items-center mt-20 lg:w-full">
+        <button class="btn btn-error text-white m-2" onclick="my_modal_4.showModal()">Meet Our Team</button>
+        <dialog id="my_modal_4" class="modal">
+          <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click outside to close</p>
+          </div>
+          <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
+      </div>
+
+      <div class="w-full h-full flex flex-col gap-4 mt-5 lg:flex-row">
+
+        <div class="w-full flex flex-row lg:flex-col lg:justify-center lg:items-center lg:text-center lg:mb-32">
+          <div class="avatar w-1/2 lg:w-full flex lg:flex-col justify-center items-center">
+            <div class="w-24 lg:w-72 rounded shadow-error bg-white">
+              <img src="img/f2.png" onclick="my_modal_5.showModal()" />
+            </div>
+          </div>
+
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic justify-center items-center text-center">
+            <h2 class="card-title bg-white text-2xl">Blak Hah Hakah</h2>
+          </div>
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic w-10/12">
+            <h2 class="card-title bg-white text-base">Specializes in things not to be specialize with.</h2>
+          </div>
+
+          <div class="card-body p-0 text-center flex justify-start items-start font-mono font-semibold italic lg:hidden">
+            <h2 class="card-title bg-white">Blak Hah Hakah</h2>
+            <div class="w-10/12">
+              <p class="text-sm inline-block bg-white">Specializes in things not to be specialize with.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-row lg:flex-col lg:justify-center lg:items-center lg:text-center lg:mb-32">
+          <div class="avatar w-1/2 lg:w-full flex lg:flex-col justify-center items-center">
+            <div class="w-24 lg:w-72 rounded shadow-error bg-white">
+              <img src="img/f3.png" />
+            </div>
+          </div>
+
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic justify-center items-center text-center">
+            <h2 class="card-title bg-white text-2xl">The Organism</h2>
+          </div>
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic w-10/12">
+            <h2 class="card-title bg-white text-base">An organism from another dimension or section.</h2>
+          </div>
+
+          <div class="card-body p-0 text-center flex justify-start items-start font-mono font-semibold italic lg:hidden">
+            <h2 class="card-title bg-white">The Organism</h2>
+            <div class="w-10/12">
+              <p class="text-sm inline-block bg-white">An organism from another dimension or section.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-row lg:flex-col lg:justify-center lg:items-center lg:text-center lg:mb-32">
+          <div class="avatar w-1/3 lg:w-full flex lg:flex-col justify-center items-center ml-1">
+            <div class="w-24 lg:w-72 rounded shadow-error bg-white">
+              <img src="img/f4.png" />
+            </div>
+          </div>
+
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic justify-center items-center text-center">
+            <h2 class="card-title bg-white text-2xl">Jumanji Clarity</h2>
+          </div>
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic w-10/12">
+            <h2 class="card-title bg-white text-base">From the shadow realm he rises, unto the darkness he returns.</h2>
+          </div>
+
+          <div class="card-body p-0 text-center flex justify-start items-start font-mono font-semibold italic lg:hidden">
+            <h2 class="card-title bg-white">Jumanji Clarity</h2>
+            <div class="w-10/12 flex justify-start items-start">
+              <p class="text-sm inline-block bg-white">From the shadow realm.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-row lg:flex-col lg:justify-center lg:items-center lg:text-center lg:mb-32">
+          <div class="avatar w-1/3 lg:w-full flex lg:flex-col justify-center items-center ml-1">
+            <div class="w-24 lg:w-72 rounded shadow-error bg-white">
+              <img src="img/f5.png" />
+            </div>
+          </div>
+
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic justify-center items-center text-center">
+            <h2 class="card-title bg-white text-2xl">2joynts</h2>
+          </div>
+          <div class="hidden lg:inline-block mt-4 font-mono font-semibold italic w-10/12">
+            <h2 class="card-title bg-white text-base">Eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy</h2>
+          </div>
+
+          <div class="card-body p-0 text-center flex justify-start items-start font-mono font-semibold italic lg:hidden">
+            <h2 class="card-title bg-white">2joints</h2>
+            <div class="w-10/12 flex justify-start items-start">
+              <p class="text-sm inline-block bg-white">Eyyyyyyyyyyyyyyyyyyyyyyyy.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer class="footer footer-center bg-base-100 text-base-content p-4 fixed bottom-0">
+        <aside>
+          <p class="font-semibold italic font-mono">Copyright © 2024 - Lulu Gods</p>
+        </aside>
+      </footer>
+
+      <script>
+        function showCard(cardNumber) {
+          // Hide all cards
+          document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
+  
+          // Show the selected card
+          const selectedCard = document.getElementById(`card${cardNumber}`);
+          if (selectedCard) {
+            selectedCard.classList.remove('hidden');
+          }
+        }
+      </script>
+</body>
+</html>
